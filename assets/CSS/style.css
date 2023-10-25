@@ -1,0 +1,94 @@
+:root{
+    --time: 1s
+    
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#game{
+    margin: auto;
+    margin-top: 320px;
+    width: 600px;
+    height: 202px;
+    border: 1px solid black ;
+    overflow: hidden;
+
+
+}
+
+#bg{
+    position: relative;
+    width: 600px;
+    height: 202px;
+    right: 600px;
+    animation: defile 10s  linear;
+
+}
+@keyframes defile{
+    0%{left:0px;}
+    100%{left:-600px;}
+}
+
+#bg2{
+    position: relative;
+    width: 600px;
+    height: 202px;
+    bottom: 206px;
+    animation: defile2 20s infinite linear;
+}
+@keyframes defile2{
+    0%{left:600px;}
+    100%{left:-600px;}
+}
+#bg3{
+    position: relative;
+    width: 600px;
+    height: 202px;
+    bottom: 411px;
+    left: 600px;
+    animation: defile3 20s infinite linear;
+    animation-delay: 10s;
+
+}
+@keyframes defile3{
+    0%{left:600px;}
+    100%{left:-600px;}
+}
+
+
+
+#personnage{
+    width: 40px;
+    height: 50px;
+    position: relative;
+    top: -501px;
+    z-index: 2;
+}
+
+.animate{
+    animation: jump 600ms ;
+}
+
+@keyframes jump{
+    0%{top: -501px;}
+    30%{top: -551px;}
+    70%{top: -551px;}
+    100%{top: -501px;}
+}
+
+#block{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: -534px;
+    left: 570px;
+    animation: block var(--time) infinite linear;
+    z-index: 3;
+}
+
+@keyframes block{
+    0%{left:580px;}
+    100%{left:-40px;}
+}
